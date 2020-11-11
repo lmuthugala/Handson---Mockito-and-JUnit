@@ -22,5 +22,5 @@ public class MyApplication implements Consumer {
 
 ```java
 Consumer consumer = injector.getInstance(Consumer.class);
-consumer.processMessages("Hi Lakith", "lakithmuthugala@gmail.com", EMAIL_SERVICE);
+consumer.processMessages("Hi Lakith", "lakithmuthugala@gmail.com");
 ```
