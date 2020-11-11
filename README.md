@@ -3,17 +3,18 @@
 ```java
 public class MyApplication implements Consumer {
 
-    private MessageService messageService;
+    Map<String, MessageService> serviceNameVSService;
 
     @Inject
-    public  MyApplication (MessageService messageService) {
-        this.messageService = messageService;
+    public  MyApplication (Set<MessageService> messageServices)
+        //Read Set and initialize Map
     }
 
     @Override
-    public void processMessages(String message, String receiver) {
+    public void processMessages(String message, String receiver, String serviceType)
         //do some msg validation, manipulation logic etc
-        this.messageService.sendMessage(message, receiver);
+        MessageService messageService = serviceNameVSService.get(serviceType)
+        messageService.sendMessage(message, receiver);
     }
 }
 ```
