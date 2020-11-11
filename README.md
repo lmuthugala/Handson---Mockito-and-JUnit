@@ -21,6 +21,6 @@ public class MyApplication implements Consumer {
 
 
 ```java
-Consumer consumer = injector.getInstance(Consumer.class);
-consumer.processMessages("Hi Lakith", "lakithmuthugala@gmail.com");
+bind(MessageService.class).annotatedWith(Email.class).to(EmailService.class)
+bind(MessageService.class).annotatedWith(SMS.class).to(SMSService.class)
 ```
