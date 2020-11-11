@@ -20,6 +20,7 @@ public class MyApplication implements Consumer {
 ```
 
 
+###### MAP:
 ```java
 "EMAIL_SERVICE" -> Object of EmailService
 "SMS_SERVICE" -> Object of SMSService
