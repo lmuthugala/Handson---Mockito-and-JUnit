@@ -3,17 +3,17 @@
 ```java
 public class MyApplication implements Consumer {
 
-    private MessageService emailService;
+    private MessageService messageService;
 
     @Inject
     public  MyApplication (MessageService messageService) {
-        this.emailService = messageService;
+        this.messageService = messageService;
     }
 
     @Override
     public void processMessages(String message, String receiver) {
         //do some msg validation, manipulation logic etc
-        this.emailService.sendMessage(message, receiver);
+        this.messageService.sendMessage(message, receiver);
     }
 }
 ```
