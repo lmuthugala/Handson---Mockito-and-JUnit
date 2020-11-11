@@ -21,9 +21,6 @@ public class MyApplication implements Consumer {
 
 
 ```java
-@Qualifier
-@Target({ FIELD, PARAMETER, METHOD })
-@Retention(RUNTIME)
-public @interface AuthToken {
-}
+Consumer consumer = injector.getInstance(Consumer.class);
+consumer.processMessages("Hi Lakith", "lakithmuthugala@gmail.com", EMAIL_SERVICE);
 ```
