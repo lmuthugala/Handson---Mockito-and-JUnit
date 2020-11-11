@@ -22,6 +22,6 @@ public class MyApplication implements Consumer {
 
 ###### MAP:
 ```java
-"EMAIL_SERVICE" -> Object of EmailService
-"SMS_SERVICE" -> Object of SMSService
+Consumer consumer = injector.getInstance(Consumer.class);
+consumer.processMessages("Hi Lakith", "lakithmuthugala@gmail.com", EMAIL_SERVICE);
 ```
