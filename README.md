@@ -21,6 +21,6 @@ public class MyApplication implements Consumer {
 
 
 ```java
-bind(MessageService.class).annotatedWith(Email.class).to(EmailService.class)
-bind(MessageService.class).annotatedWith(SMS.class).to(SMSService.class)
+"EMAIL_SERVICE" -> Object of EmailService
+"SMS_SERVICE" -> Object of SMSService
 ```
